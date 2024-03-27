@@ -31,17 +31,26 @@ header {
     left: 0;
 }
 
-.header .logo  {
+.nav-menu {
     display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   max-width: 992px;
+   margin: 0 auto;
+
+}
+
+.header .nav-menu .logo  {
     align-items: center;
     justify-content:left;
-    box-sizing: border-box;
     cursor: pointer;
     height: auto;
     width: 8vw;
-    max-width: 80px;
+    max-width: 90px;
     min-width: 50px;
-    margin-bottom: 0.5%;
+    padding: 1%;
+    margin-right: 150px;
 }
 
 .header .logo img {
@@ -56,12 +65,15 @@ header {
 
 .header .nav-links {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 .header .nav-links li {
-    display: inline-block;
-    padding: 0 5px;
+    padding: 0 8px;
     transition: all 0.3s;
+    width: max-content;
+    text-transform: uppercase;
 }  
 
 .header .nav-links li:hover {
@@ -72,6 +84,7 @@ header {
     font-style: normal;
     color: rgb(0, 67, 129);
     border-bottom: 0px solid;
+    font-size: 0.8rem;
 }
 
 .header .nav-links a:hover {
@@ -82,6 +95,10 @@ header {
     border-radius: 3px;
 }
 
+.header .nav-menu .nav-links .nav-menu-link_active {
+    color: rgb(0, 183, 255);
+}
+
 .header .btn button {
     padding: 10px 15px;
     border-radius: 50px;
@@ -90,6 +107,8 @@ header {
     color: aliceblue;
     transition: all 0.3s;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 .header .btn button:hover {
@@ -163,42 +182,33 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-    body {
+    .body {
         position: relative;
         padding-bottom: 4.5rem;
         background-color: rgb(255, 255, 255);
-        padding-top: 3rem;
+        padding-top: 1rem;
         padding-left: 0rem;
         padding-right: 0rem;
  }
-    header {
-        display: flex;
-        position: fixed;
-        background-color: aliceblue;
-        justify-content: space-between;
-        align-items: center;
+    .header {
         height: 12vw;
-        max-height: 95px;
-        min-height: 55px;
-        width: 100%;
-        padding: 5px 10%;
-        border-bottom: 1px groove rgb(174, 223, 255);
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        top: 0;
-        left: 0;
 }
 
-    .header .nav-links li {
-        flex-direction: column;
-        padding: 0 5px;
+    .header .nav-links {
+        flex-direction:column;
         align-items: center;
-        justify-content: center;
         transition: all 0.3s;
         background-color: rgb(0, 59, 107);
         position: fixed;
         left: 0;
-        top: 60px;
+        top: 10%;
         width: 100%;
+        padding: 1rem 0;
+        line-height: 2.5rem;
+
+        height: calc(100%-3rem);
+        overflow-y: auto;
+
     }  
 
     .header .nav-links li:hover {
@@ -207,8 +217,12 @@ img {
 
     .header .nav-links a {
         font-style: normal;
-        color: rgb(0, 67, 129);
+        color: rgb(255, 255, 255);
         border-bottom: 0px solid;
+    }
+
+    .header .nav-menu .nav-links .nav-menu-link_active {
+        color: rgb(0, 183, 255);
     }
 
     .header .nav-links a:hover {
@@ -218,6 +232,80 @@ img {
         padding-bottom: 8%;
         border-radius: 3px;
     }
+
+    .nav-toggle {
+        color: rgb(255, 255, 255);
+        background-color: rgb(39, 140, 255);
+        border: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 50px;
+        padding: 1px;
+        display: block;
+        font-size: 25px;
     
+    }
+    
+    .nav-toggle:hover {
+        color: rgb(226, 242, 255);
+        border: none;
+        transform: scale(1.1);
+    }
+    
+
+}
+
+    @media screen and ( min-width:576px ) and (max-width: 992px) {
+        .body {
+            position: relative;
+            padding-bottom: 4.5rem;
+            background-color: rgb(255, 255, 255);
+            padding-top: 1rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+    }
+        .header {
+            height: 12vw;
+    }
+
+        .header .nav-menu .logo  {
+            align-items: center;
+            justify-content:left;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            max-width: 100px;
+            min-width: 80px;
+            padding: 1%;
+            margin-right: 15px;
+    }
+
+}
+
+@media screen and ( min-width:992px ) and (max-width: 1600px) {
+    .body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+}
+    .header {
+        height: 12vw;
+}
+
+    .header .nav-menu .logo  {
+        align-items: center;
+        justify-content:left;
+        position: relative;
+        cursor: pointer;
+        height: auto;
+        width: 100%;
+        max-width: 100px;
+        min-width: 90px;
+        padding: 1%;
+        margin-right: 100px;
+    }
 
 }
