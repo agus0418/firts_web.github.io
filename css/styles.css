@@ -1,40 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-variation-settings: "wdth" 100;
+    font-size: 1.1rem;
 }
 
-h1, h2 {
-    text-align: center;
-    background-color: rgb(240, 240, 240);
-    border: 1px solid rgb(195, 231, 255);
-    border-radius: 5px;
+/*Nav menu*/
+
+header {
+    display: flex;
+    position: fixed;
+    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vw;
+    max-height: 95px;
+    min-height: 55px;
+    width: 100%;
+    padding: 5px 10%;
+    border-bottom: 1px groove rgb(174, 223, 255);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+}
+
+.header .logo  {
+    display: flex;
+    align-items: center;
+    justify-content:left;
     box-sizing: border-box;
+    cursor: pointer;
+    height: auto;
+    width: 8vw;
+    max-width: 80px;
+    min-width: 50px;
+    margin-bottom: 0.5%;
+}
+
+.header .logo img {
+    
+    transition: all 0.3s;
     width: 100%;
 }
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 5px;
+    transition: all 0.3s;
+}  
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-style: normal;
+    color: rgb(0, 67, 129);
+    border-bottom: 0px solid;
+}
+
+.header .nav-links a:hover {
+
+    color: rgb(0, 140, 255);
+    border-bottom: 1px solid rgb(0, 140, 255);
+    padding-bottom: 8%;
+    border-radius: 3px;
+}
+
+.header .btn button {
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: rgb(0, 180, 252);
+    color: aliceblue;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.header .btn button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 195, 255);
+    border: 1.5px solid rgb(0, 195, 255);
+    font-weight: 700;
+}
+
+.nav-toggle {
+    color: rgb(255, 255, 255);
+    background-color: rgb(39, 140, 255);
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    display: none;
+
+}
+
+.nav-toggle:hover {
+    color: rgb(226, 242, 255);
+    border: none;
+    transform: scale(1.1);
+}
+
+
+
+/*Nav Menu mobile*/
+
+.header a {
+    text-decoration: none;
+}
+
+
+
+
+/*body*/
 
 body {
     position: relative;
-    min-height: 100vh;
     padding-bottom: 4.5rem;
+    background-color: rgb(255, 255, 255);
+    padding-top: 5.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+   
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    background-color: rgb(230, 236, 255);
-}
 
 footer {
     background-color: rgb(0, 140, 255);
@@ -54,4 +160,64 @@ footer {
 
 img {
     width: 20%;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 3rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+ }
+    header {
+        display: flex;
+        position: fixed;
+        background-color: aliceblue;
+        justify-content: space-between;
+        align-items: center;
+        height: 12vw;
+        max-height: 95px;
+        min-height: 55px;
+        width: 100%;
+        padding: 5px 10%;
+        border-bottom: 1px groove rgb(174, 223, 255);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        top: 0;
+        left: 0;
+}
+
+    .header .nav-links li {
+        flex-direction: column;
+        padding: 0 5px;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        background-color: rgb(0, 59, 107);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+    }  
+
+    .header .nav-links li:hover {
+        transform: scale(1.1);
+    }
+
+    .header .nav-links a {
+        font-style: normal;
+        color: rgb(0, 67, 129);
+        border-bottom: 0px solid;
+    }
+
+    .header .nav-links a:hover {
+
+        color: rgb(0, 140, 255);
+        border-bottom: 1px solid rgb(0, 140, 255);
+        padding-bottom: 8%;
+        border-radius: 3px;
+    }
+    
+
 }
