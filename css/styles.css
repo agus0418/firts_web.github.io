@@ -31,10 +31,16 @@ header {
     left: 0;
 }
 
+.header a {
+    text-decoration: none;
+}
+
 .nav-menu {
     display: flex;
    justify-content: space-between;
    align-items: center;
+   list-style: none;
+   text-decoration: none;
 
    max-width: 992px;
    margin: 0 auto;
@@ -74,6 +80,9 @@ header {
     transition: all 0.3s;
     width: max-content;
     text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+
 }  
 
 .header .nav-links li:hover {
@@ -137,14 +146,31 @@ header {
     transform: scale(1.1);
 }
 
-
-
-/*Nav Menu mobile*/
-
-.header a {
-    text-decoration: none;
+.button-cont {
+    margin-left: 0px;
 }
 
+.icon-whatsapp {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    cursor: pointer;
+    
+}
+
+.icon-whatsapp i {
+    font-size: 25px;
+    padding: 0 3px;
+    transition: all 0.2s;
+
+}
+
+.icon-whatsapp i:hover {
+    font-size: 35px;
+    padding: 0 3px;
+}
 
 
 
@@ -176,11 +202,6 @@ footer {
 }
 
 
-
-img {
-    width: 20%;
-}
-
 @media screen and (max-width: 576px) {
     .body {
         position: relative;
@@ -196,18 +217,20 @@ img {
 
     .header .nav-links {
         flex-direction:column;
-        align-items: center;
+        align-items: flex-start;
         transition: all 0.3s;
-        background-color: rgb(0, 59, 107);
+        background-color: rgb(34, 34, 34);
         position: fixed;
-        left: 0;
-        top: 10%;
-        width: 100%;
-        padding: 1rem 0;
+        top: 12vw;
+        width: 50%;
+        padding: 1rem 5px 10px;
         line-height: 2.5rem;
+
 
         height: calc(100%-3rem);
         overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
 
     }  
 
@@ -219,6 +242,7 @@ img {
         font-style: normal;
         color: rgb(255, 255, 255);
         border-bottom: 0px solid;
+    
     }
 
     .header .nav-menu .nav-links .nav-menu-link_active {
@@ -235,15 +259,17 @@ img {
 
     .nav-toggle {
         color: rgb(255, 255, 255);
-        background-color: rgb(39, 140, 255);
+        background-color: rgb(0, 119, 255);
         border: none;
         transition: all 0.3s;
         cursor: pointer;
         border-radius: 50px;
-        padding: 1px;
+        padding: 1px 0;
         display: block;
         font-size: 25px;
-    
+        width: 120px;
+        height: auto;
+        letter-spacing: 3px;
     }
     
     .nav-toggle:hover {
@@ -251,7 +277,23 @@ img {
         border: none;
         transform: scale(1.1);
     }
-    
+
+    .nav-menu-btn-toggle {
+        
+    }
+
+    .nav-links.nav-links_visible {
+        left: 0%;
+    }
+
+    .header .btn button {
+        display: none;
+    }
+
+    .button-cont {
+        display: none;
+    }
+
 
 }
 
