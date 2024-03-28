@@ -267,7 +267,115 @@ body {
     font-size: 15px;
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (min-width:10px) and (max-width: 234px) {
+
+    header {
+            margin-top: 0px;
+        }
+
+    .header .nav-menu .logo  {
+            align-items: center;
+            justify-content:left;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            max-width:65px;
+            min-width: 55px;
+            margin-top: 2px;
+        }  
+
+        .header .nav-links {
+            flex-direction:column;
+            align-items: flex-start;
+            transition: all 0.3s;
+            background-color: aliceblue;
+            position: fixed;
+            top: 57px;
+            width: 100%;
+            padding: 0rem 0px;
+            line-height: 2.5rem;
+            border-bottom: 0px groove rgb(53, 164, 255);
+            border-top: 1px solid rgb(219, 219, 219);
+            
+            height: calc(100%-3rem);
+            overflow-y: auto;
+            left: 100%;
+            transition: left 0.3s;
+    
+        }  
+    
+        .header .nav-links li {
+            width: 90%;
+            border-bottom: 1px groove rgb(194, 194, 194);
+        }
+    
+        .header .nav-links li:hover {
+            transform: scale(1.1);
+        }
+    
+        .header .nav-links a {
+            color: rgb(0, 81, 255);
+            border-bottom: 0px groove rgb(0, 140, 255);
+            font-weight: 600;
+            padding-left: 20px;
+        
+        }
+    
+        .header .nav-menu .nav-links .nav-menu-link_active {
+            color: rgb(0, 183, 255);
+        }
+    
+        .header .nav-links a:hover {
+    
+            color: rgb(0, 140, 255);
+            border-bottom: 0px solid rgb(0, 140, 255);
+            padding-bottom: 8%;
+            border-radius: 3px;
+        }
+
+
+        .nav-toggle {
+                background-color: rgba(0, 89, 255, 0);
+                color: rgb(41, 109, 255);
+                border: none;
+                transition: all 0.3s;
+                cursor: pointer;
+                border-radius: 50px;
+                padding: 5px;
+                width: 50px;
+                height: auto;
+                display: block;
+                margin-left: -90px;
+            }
+            
+            .nav-toggle:hover {
+                color: rgb(255, 255, 255);
+                background-color: rgb(0, 84, 139);
+                border: none;
+                transform: scale(1.1);
+            }
+
+            .nav-links.nav-links_visible {
+                left: 0%;
+            }
+        
+            .header .btn button {
+                display: none;
+            }
+        
+            .button-cont {
+                display: none;
+            }
+
+            .icon-whatsapp {
+                display: none;
+            }
+        
+    
+}
+    
+
+@media screen and (min-width:239px) and (max-width: 368px) {
 
     .body {
         position: relative;
@@ -344,20 +452,16 @@ body {
     }
 
     .nav-toggle {
-        color: rgb(255, 255, 255);
-        background-color: rgba(255, 255, 255, 0);
-        color: rgb(0, 118, 173);
+        background-color: rgba(0, 89, 255, 0);
+        color: rgb(41, 109, 255);
         border: none;
         transition: all 0.3s;
         cursor: pointer;
         border-radius: 50px;
-        padding: 1px 0;
+        padding: 5px;
         display: block;
-        font-size: 20px;
-        width: 110px;
+        width: 50px;
         height: auto;
-        letter-spacing: 1px;
-        margin-left: -50px;
     }
     
     .nav-toggle:hover {
@@ -407,6 +511,7 @@ body {
         padding-right: 0rem;
     }
     .header {
+        margin-top: 2px;
         height: 12vw;
     }
 
@@ -479,13 +584,12 @@ body {
         border: none;
         transition: all 0.3s;
         cursor: pointer;
-        border-radius: 50px;
+        border-radius: 150px;
         padding: 1px 0;
         display: block;
         font-size: 25px;
-        width: 120px;
+        width: 50px;
         height: auto;
-        letter-spacing: 3px;
         margin-left: 0px;
         margin-right: 0px;
     }
@@ -601,6 +705,7 @@ body {
     @media screen and ( min-width:576px ) and (max-width: 767px) {
 
         .header {
+            margin-top: 4px;
             height: 12vw;
         }
 
