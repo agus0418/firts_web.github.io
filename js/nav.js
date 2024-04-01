@@ -1,4 +1,5 @@
 
+/*
 const navToggle = document.querySelector(".nav-toggle");
 const navMenuLinks = document.querySelector(".nav-links");
 
@@ -10,4 +11,11 @@ navToggle.addEventListener("click", () => {
     } else {
         navToggle.setAttribute("aria-label", "Abrir menu");
     }
-}) 
+}) */
+
+var hamburger = document.getElementById('Hamburger');
+var menu = document.getElementById('Menu');
+
+hamburger.addEventListener('click', function(){
+    menu.classList.toggle('open');
+})
