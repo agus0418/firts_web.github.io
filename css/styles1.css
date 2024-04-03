@@ -319,97 +319,87 @@ body {
 .footer-nav {
     background: rgb(0,63,255);
     background: linear-gradient(90deg,rgba(0,212,255,1)  0%, rgba(0,63,255,1) 100%);
-    bottom: 0;
+
     width: 100%;
     position: absolute;
-    color: #fff;
-    padding: 50px 0 30px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
     
 }
 
-.footer-nav .row { 
-    width: 85%;
+.footer-nav .group-1 {
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer-nav .group-1 .box figure {
+    width: 100%;
+    height: 100%;   
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content:space-between;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-nav .row .col {
-    flex-basis: 25%;
-    padding: 10px;
+.footer-nav .group-1 .box figure img {
+    width: 100px;
 }
 
-.footer-nav .row .col:nth-child(2), .col:nth-child(3) {
-    flex-basis: 15%;
+.footer-nav .group-1 .box figure img:hover {
+    transform: scale(1.1);
 }
 
-.footer-nav .row .col .logo  {
-    width: 200px;
-    margin-bottom: 30px;
+.footer-nav .group-1 .box h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.footer-nav .row .col h3 {
-    width: fit-content;
-    margin-bottom: 60px;
-    position: relative;
+.footer-nav .group-1 .box p {
+    color: white;
+    margin-bottom: 10px;
 }
 
-.footer-nav .row .col .email-id {
-    width: fit-content;
-    border-bottom: 1px groove #eee;
-    margin: 20px 0px;
-}
- 
-.footer-nav .row .col ul li{
-    list-style: none !important;
-    margin-bottom: 12px;
-}
-
-.footer-nav .row .col ul li a {
-    color: #fff;
+.footer-nav .group-1 .social-red a{
+    display: inline-block;
     text-decoration: none;
-}
-
-.footer-nav .row .col .redes-sociales .fab{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    color: rgb(0, 132, 255);
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    transition: all 0.2s;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
     text-align: center;
-    line-height: 40px;
-    font-size: 20px;color: #00aeff;
-    background-color: #eee;
-    margin-right: 15px;
-    cursor: pointer;
-    margin-top: 10px;
+    justify-content: center;
+    border-radius: 35px;
 }
 
-.footer-nav .row .col .redes-sociales .fab:hover {
+.footer-nav .group-1 .social-red a:hover {
     transform: scale(1.2);
     background-color: rgb(0, 180, 252);
     color: rgb(255, 255, 255);
 }
 
-.footer-nav hr{
-    background-color: #3b5998;
-    width: 90%;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin: 20px auto;;
-}
-
-.footer-nav .copyright {
-    align-items: center;
-    justify-content: center;
+.footer-nav .group-2  {
+    color: aliceblue;
     display: flex;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: rgb(0, 39, 124);
+    justify-content: center;
 }
 
+.footer-nav .group-2 b{
+    font-size: 15px;
+}
 
-
+.footer-nav .group-2 small{
+    font-size: 15px;
+}
 
 @media screen and (min-width:10px) and (max-width: 234px) {
 
