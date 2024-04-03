@@ -313,7 +313,7 @@ body {
         font-size: 2rem;
         text-align:center;
         color:rgb(254, 253, 253);
-        background-image: url(/img/arg.jpg);
+        background-image: url(../img/arg.jpg);
         background-size:cover; 
         background-repeat:no-repeat;
         background-position: center center;
@@ -404,7 +404,7 @@ footer {
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    font-size: 20px;color: #00aeff;
+    font-size: 20px;color: #003cff;
     background-color: #eee;
     margin-right: 15px;
     cursor: pointer;
