@@ -27,6 +27,7 @@ header {
     width: 100%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
+    z-index: 999;
 }
 
 .header .logo img {
@@ -267,22 +268,22 @@ body {
     }
 
     .tucuman {
-        background-image: url(/img/tucumancasa.jpg);
+        background-image: url(../img/tucumancasa.jpg);
   
     }
 
     .corrientes {
-        background-image: url(/img/corrientes.jpeg);
+        background-image: url(../img/corrientes.jpeg);
     
     }
 
     .sanjuan {
-        background-image: url(/img/sanjuan.jpeg);
+        background-image: url(../img/sanjuan.jpeg);
     
     }
 
     .santafe {
-        background-image: url(/img/santafe.jpeg);
+        background-image: url(../img/santafe.jpeg);
     
     }
 
