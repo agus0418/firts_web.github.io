@@ -222,6 +222,7 @@ body {
     padding-top: 5rem;
     padding-left: 0rem;
     padding-right: 0rem;
+    height: 100vh;
    
     }
 
@@ -313,7 +314,7 @@ body {
         font-size: 2rem;
         text-align:center;
         color:rgb(254, 253, 253);
-        background-image: url(../img/arg.jpg);
+        background-image: url(/img/arg.jpg);
         background-size:cover; 
         background-repeat:no-repeat;
         background-position: center center;
@@ -327,7 +328,7 @@ body {
 footer {
     background: rgb(0,63,255);
     background: linear-gradient(90deg,rgba(0,212,255,1)  0%, rgba(0,63,255,1) 100%);
-    bottom: 0;
+    bottom: unset;
     width: 100%;
     position: absolute;
     color: #fff;
@@ -542,6 +543,7 @@ footer {
     footer {
         bottom: unset;
         position: absolute;
+        z-index: 1;
      }
 
      .footer-nav .row { 
@@ -793,7 +795,6 @@ footer {
     @media screen and ( min-width:576px ) and (max-width: 767px) {
 
         header {
-            background-color: aliceblue;
             position: absolute;
         }
 
@@ -1046,7 +1047,6 @@ footer {
 @media screen and ( min-width:992px ) and (max-width: 1600px) {
     header {
         position: fixed;
-        background-color: aliceblue;
         display: flex;
         height: 100px;
         border-bottom: 1px groove rgba(174, 223, 255, 0.658);
@@ -1057,6 +1057,7 @@ footer {
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         align-items: center;
+        z-index: 999;
     }
     
     .header .logo  {
