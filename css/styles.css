@@ -12,7 +12,136 @@
     font-weight: 500;
     font-style: normal;
     font-size: 1.1rem;
+    border: 0;
 }
+
+.container {
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.container_prov {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card_container {
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card_article {
+    position: relative;
+    overflow: hidden;
+}
+
+.card_image {
+    width: 100%;
+    border-radius: 1.5rem;
+    height: auto;
+}
+
+.card_image:hover{
+    opacity: 70%;
+}
+
+.card_data {
+    width: 280px;
+    background-color: aliceblue;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    bottom: -9rem;
+    position: absolute;
+    border-radius: 1rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card_description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.card_title {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.card_button {
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+}
+
+.card_button:hover {
+    text-decoration: underline;
+}
+
+.card_article:hover .card_data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card_article:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+.card_article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+
+.card_article:not(:hover) .card_data  {
+    animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+
+
 
 /*Nav menu*/
 
@@ -103,7 +232,7 @@ header {
 
 }
 
-.action_btn button {
+.action_btn {
     background-color: rgb(0, 195, 255);
     color: aliceblue;
     padding: 0.5rem 1rem;
@@ -118,7 +247,7 @@ header {
     text-transform: uppercase;
 }
 
-.action_btn button:hover {
+.action_btn:hover {
     scale: 1.01;
     color: rgb(0, 136, 255);
     background-color: aliceblue;
@@ -205,7 +334,7 @@ header {
     text-decoration: none;
 }
 
-.header .dropdown_menu .action_btn button {
+.header .dropdown_menu .action_btn {
     justify-content: center;
     display: flex;
     list-style: none;
@@ -219,11 +348,10 @@ header {
 body {
     position: relative;
     padding-bottom: 4.5rem;
-    background-color: rgb(255, 255, 255);
+    background-color: aliceblue;
     padding-top: 5rem;
     padding-left: 0rem;
     padding-right: 0rem;
-    height: 100vh;   
     }
 
     .swiper {
@@ -242,8 +370,8 @@ body {
     .provincias{
         border:0.3em solid rgb(90, 89, 89);
         border-radius: 1px;
-        height: 250px;
-        width: 250px;
+        height: auto;
+        width: 100%;
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center center;
@@ -290,12 +418,11 @@ body {
     
     }
 
-    section{ 
-
-        display: flex;
-        justify-content: space-evenly;
-        padding: 1rem;
-        
+    .prov_section { 
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        justify-content: space-between;
+        padding: 1rem;   
     }
 
     .logoprov{
@@ -444,7 +571,7 @@ footer {
 .underline {
     width: 100%;
     height: 5px;
-    background: #767676;
+    background: #004777;
     border-radius: 3px;
     position: absolute;
     top: 25px;
@@ -473,6 +600,19 @@ footer {
 
 
 @media screen and (min-width:10px) and (max-width: 234px) {
+
+    .container_prov {
+        margin-inline: 1rem;
+    }
+
+    .card_data {
+        width: 250px;
+        padding: 1rem;
+    }
+
+    .card_container {
+        gap: 5px;
+    }
 
     header {
         position: absolute;
@@ -522,7 +662,7 @@ footer {
         align-items: center;
     }
 
-    .header .dropdown_menu .action_btn button {
+    .header .dropdown_menu .action_btn {
         width: 100%;
         justify-content: center;
         display: flex;
@@ -609,6 +749,15 @@ footer {
 
 @media screen and (min-width:239px) and (max-width: 368px) {
 
+    .container_prov {
+        margin-inline: 1rem;
+    }
+
+    .card_data {
+        width: 250px;
+        padding: 1rem;
+    }
+
     header {
         position: absolute;
     }
@@ -657,7 +806,7 @@ footer {
         align-items: center;
     }
 
-    .header .dropdown_menu .action_btn button {
+    .header .dropdown_menu .action_btn {
         width: 100%;
         justify-content: center;
         display: flex;
@@ -702,6 +851,20 @@ footer {
 
 @media screen and (min-width:368px) and (max-width: 575px) {
     
+    .container_prov {
+        margin-inline: 1rem;
+    }
+
+    .card_data {
+        width: 250px;
+        padding: 1rem;
+    }
+
+    .card_image {
+        width: 100%;
+        height: 100%;
+    }
+
     .header {
         position: absolute;
     }
@@ -754,7 +917,7 @@ footer {
         align-items: center;
     }
 
-    .header .dropdown_menu .action_btn button {
+    .header .dropdown_menu .action_btn {
         width: 100%;
         justify-content: center;
         display: flex;
@@ -799,6 +962,15 @@ footer {
 
     @media screen and ( min-width:576px ) and (max-width: 767px) {
 
+        .container_prov {
+            margin-inline: 1rem;
+        }
+    
+        .card_data {
+            width: 250px;
+            padding: 1rem;
+        }
+
         header {
             position: absolute;
         }
@@ -829,7 +1001,7 @@ footer {
 
         }
 
-        .header .dropdown_menu .action_btn button {
+        .header .dropdown_menu .action_btn {
             width: 100%;
             justify-content: center;
             display: flex;
@@ -905,6 +1077,20 @@ footer {
 
 @media screen and ( min-width:768px ) and (max-width: 991px){
     
+    .container_prov {
+        height: 100vh;
+    }
+
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+    }
+
     header {
         position: fixed;
         background-color: aliceblue;
@@ -971,7 +1157,7 @@ footer {
     
     }
     
-    .action_btn button {
+    .action_btn {
         background-color: rgb(0, 195, 255);
         color: aliceblue;
         padding: 0.5rem 1rem;
@@ -987,7 +1173,7 @@ footer {
         display: none;
     }
     
-    .action_btn button:hover {
+    .action_btn:hover {
         scale: 1.01;
         color: rgb(0, 136, 255);
         background-color: aliceblue;
@@ -1051,6 +1237,25 @@ footer {
 }
 
 @media screen and ( min-width:992px ) and (max-width: 1600px) {
+
+    .container_prov {
+        height: 100vh;
+    }
+
+    .card_container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card_image {
+        width: 90%;
+        height: 100%;
+    }
+
+    .card_data {
+        width: 250px;
+        padding-inline: 2.5rem;
+    }
+
     header {
         position: fixed;
         display: flex;
@@ -1124,7 +1329,7 @@ footer {
         margin-right: -10%;
     }
 
-    .action_btn button {
+    .action_btn {
         background-color: rgb(0, 195, 255);
         color: aliceblue;
         padding: 0.5rem 1rem;
@@ -1140,7 +1345,7 @@ footer {
         display: block;
     }
     
-    .action_btn button:hover {
+    .action_btn:hover {
         scale: 1.01;
         color: rgb(0, 136, 255);
         background-color: aliceblue;
@@ -1204,6 +1409,31 @@ footer {
 }
 
 @media screen and ( min-width:1600px ) {
+
+    .container_prov {
+        height: 50%;
+    }
+
+    .card_container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .card_image {
+        width: 100%;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .card_image:hover {
+        opacity: 70%;
+    }
+
+    .card_data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+
     header {
         position: fixed;
         background-color: aliceblue;
@@ -1277,7 +1507,7 @@ footer {
         margin-right: -10%;
     }
 
-    .action_btn button {
+    .action_btn {
         background-color: rgb(0, 195, 255);
         color: aliceblue;
         padding: 0.5rem 1rem;
@@ -1293,7 +1523,7 @@ footer {
         display: block;
     }
     
-    .action_btn button:hover {
+    .action_btn:hover {
         scale: 1.01;
         color: rgb(0, 136, 255);
         background-color: aliceblue;
