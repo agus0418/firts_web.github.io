@@ -24,7 +24,7 @@
     display: grid;
     place-items: center;
     margin-inline: 1.5rem;
-    padding-block: 5rem;
+    padding-block: 2rem;
 }
 
 .card_container {
@@ -40,7 +40,8 @@
 .card_image {
     width: 100%;
     border-radius: 1.5rem;
-    height: auto;
+    height: 100%;
+    background-size: cover;
 }
 
 .card_image:hover{
@@ -601,17 +602,19 @@ footer {
 
 @media screen and (min-width:10px) and (max-width: 234px) {
 
-    .container_prov {
-        margin-inline: 1rem;
+    .card_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card_image {
+        width: 100%;
+        height: 100%;
     }
 
     .card_data {
-        width: 250px;
-        padding: 1rem;
-    }
-
-    .card_container {
-        gap: 5px;
+        width: 180px;
+        padding-inline: 2.5rem;
+        font-size: 1rem;
     }
 
     header {
@@ -678,7 +681,6 @@ footer {
     body {
         position: relative;
         padding-bottom: 4.5rem;
-        background-color: rgb(255, 255, 255);
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
@@ -749,13 +751,19 @@ footer {
 
 @media screen and (min-width:239px) and (max-width: 368px) {
 
-    .container_prov {
-        margin-inline: 1rem;
+    .card_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card_image {
+        width: 100%;
+        height: 100%;
     }
 
     .card_data {
-        width: 250px;
-        padding: 1rem;
+        width: 200px;
+        padding-inline: 2.5rem;
+        font-size: 1rem;
     }
 
     header {
@@ -822,7 +830,6 @@ footer {
     body {
         position: relative;
         padding-bottom: 4.5rem;
-        background-color: rgb(255, 255, 255);
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
@@ -849,20 +856,21 @@ footer {
 }
 
 
-@media screen and (min-width:368px) and (max-width: 575px) {
+@media screen and (min-width:368px) and (max-width: 576px) {
     
-    .container_prov {
-        margin-inline: 1rem;
-    }
-
-    .card_data {
-        width: 250px;
-        padding: 1rem;
+    .card_container {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .card_image {
         width: 100%;
         height: 100%;
+    }
+
+    .card_data {
+        width: 280px;
+        padding-inline: 2.5rem;
+        font-size: 1rem;
     }
 
     .header {
@@ -933,7 +941,6 @@ footer {
     body {
         position: relative;
         padding-bottom: 4.5rem;
-        background-color: rgb(255, 255, 255);
         padding-left: 0rem;
         padding-right: 0rem;
         padding-top: 0rem;
@@ -962,14 +969,22 @@ footer {
 
     @media screen and ( min-width:576px ) and (max-width: 767px) {
 
-        .container_prov {
-            margin-inline: 1rem;
+        .card_container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem; 
+        }
+    
+        .card_image {
+            width: 100%;
+            height: 100%;
         }
     
         .card_data {
-            width: 250px;
-            padding: 1rem;
+            width: 230px;
+            padding-inline: 2.0rem;
+            font-size: 0.9rem;
         }
+
 
         header {
             position: absolute;
@@ -1048,7 +1063,6 @@ footer {
 
         body {
             padding-bottom: 4.5rem;
-            background-color: rgb(255, 255, 255);
             padding-left: 0rem;
             padding-right: 0rem;
             padding-top: 0rem;
@@ -1076,19 +1090,21 @@ footer {
 }
 
 @media screen and ( min-width:768px ) and (max-width: 991px){
-    
-    .container_prov {
-        height: 100vh;
-    }
 
     .card_container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem   ;
     }
 
+    .card_image {
+        width: 100%;
+        height: 100%;
+    }
 
-    .card_container {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 1.5rem;
+    .card_data {
+        width: 280px;
+        padding-inline: 2.5rem;
+        font-size: 1rem;
     }
 
     header {
@@ -1210,7 +1226,6 @@ footer {
     body {
         position: relative;
         padding-bottom: 4.5rem;
-        background-color: rgb(255, 255, 255);
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
@@ -1236,23 +1251,24 @@ footer {
 
 }
 
-@media screen and ( min-width:992px ) and (max-width: 1600px) {
+@media screen and ( min-width:992px ) and (max-width: 1280px) {
 
     .container_prov {
-        height: 100vh;
+        height: 100%;
     }
 
     .card_container {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     .card_image {
-        width: 90%;
+        width: 100%;
         height: 100%;
     }
 
     .card_data {
-        width: 250px;
+        width: 300px;
         padding-inline: 2.5rem;
     }
 
@@ -1380,12 +1396,12 @@ footer {
     
     
     body {
-        position: relative;
         padding-bottom: 4.5rem;
-        background-color: rgb(255, 255, 255);
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
+        justify-content: center;
+        align-items: center;
      }
 
      .swiper {
@@ -1408,25 +1424,36 @@ footer {
     
 }
 
-@media screen and ( min-width:1600px ) {
-
-    .container_prov {
-        height: 50%;
-    }
+@media screen and ( min-width:1280px ) and (max-width: 1600px) {
 
     .card_container {
         grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        gap: 3rem;
     }
 
     .card_image {
         width: 100%;
-        background-size: cover;
         height: 100%;
     }
 
-    .card_image:hover {
-        opacity: 70%;
+    .card_data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+
+}
+
+
+@media screen and ( min-width:1600px ) {
+
+    .card_container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5rem;
+    }
+
+    .card_image {
+        width: 100%;
+        height: 100%;
     }
 
     .card_data {
@@ -1560,7 +1587,6 @@ footer {
     body {
         position: relative;
         padding-bottom: 4.5rem;
-        background-color: rgb(255, 255, 255);
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
