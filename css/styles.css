@@ -423,8 +423,41 @@ body {
         padding: 15px 20px;
         border: none;
         cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        background-color: transparent !important;
+        transition: all 0.3s ease;
     }
 
+    .tab_header .tab_btn:hover,
+    .tab_header .tab_btn.active {
+        color: #00b7ff;
+    }
+
+    .tab_header .underline {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        /*Cambio el ancho en .js */
+        transition: all 0.3s ease;
+        background-color: #00b7ff;
+    }
+
+    .tab_body {
+        display: flex;
+    } 
+
+    .tab_body .tab_content {
+        min-width: 100%;
+        padding: 20px;
+        font-size: 12px;
+        transition: all 0.3s ease;
+        text-align: left;
+    }
+
+        
 
 /*Footer*/
 
