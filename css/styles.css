@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -141,6 +146,7 @@
       overflow: hidden;
     }
   }
+
 
 
 
@@ -353,6 +359,7 @@ body {
     padding-top: 5rem;
     padding-left: 0rem;
     padding-right: 0rem;
+    height: 100%;
     }
 
     .swiper {
@@ -366,72 +373,8 @@ body {
         object-fit: cover;
       }
 
-    /*Main Provincias  */
+    /*Main   */
 
-    .provincias{
-        border:0.3em solid rgb(90, 89, 89);
-        border-radius: 1px;
-        height: auto;
-        width: 100%;
-        background-size: cover;
-        background-repeat:no-repeat;
-        background-position: center center;
-        box-shadow:2px 2px 0px rgba(114, 114, 114, 0.502);
-    }
-    .provincias, #prov_name{
-        margin: 2%;
-    } 
-
-
-    #prov_name {
-
-        color: rgb(15, 7, 0);
-        font-family: "Roboto Condensed";
-        font-size: 2em;
-        font-weight: 700;
-        text-shadow: 3px 2px 0px whitesmoke;
-        font-variant: small-caps;
-        text-align: center;
-        position:relative;
-        top: 40%;
-        background-color: rgba(245, 238, 220, 0.765);
-
-
-    }
-
-    .tucuman {
-        background-image: url(../img/tucumancasa.jpg);
-  
-    }
-
-    .corrientes {
-        background-image: url(../img/corrientes.jpeg);
-    
-    }
-
-    .sanjuan {
-        background-image: url(../img/sanjuan.jpeg);
-    
-    }
-
-    .santafe {
-        background-image: url(../img/santafe.jpeg);
-    
-    }
-
-    .prov_section { 
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        justify-content: space-between;
-        padding: 1rem;   
-    }
-
-    .logoprov{
-
-    width: 200px;
-    align-self: center;
-
-    }
     .parrafoppal{ 
         margin: 10;
         padding: 5%;
@@ -452,6 +395,34 @@ body {
         background-position: center center;
         border:0.1em solid rgba(90, 89, 89, 0.696);
 
+    }
+
+    .container_tabs {
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tab_wrapper {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        background-color: #eee;
+    }
+
+    .tab_header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px groove #dfdfdfe5;
+    }
+
+    .tab_header .tab_btn {
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
     }
 
 
