@@ -397,56 +397,55 @@ body {
 
     }
 
+    /* places card */ 
+
     .container_tabs {
         display: flex;
-        max-width: 1200px;
+        max-width: 100%;
         margin: auto;
         padding: 20px;
         justify-content: center;
         align-items: center;
+        background-color: #eee;
+        
     }
 
     .tab_wrapper {
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      /*  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
         background-color: #eee;
+
     }
 
     .tab_header {
         position: relative;
         display: flex;
         align-items: center;
+        justify-content: center;
         width: 100%;
         border-bottom: 1px groove #dfdfdfe5;
     }
 
     .tab_header .tab_btn {
         padding: 15px 20px;
-        border: none;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 17px;
         font-weight: 600;
         background-color: transparent !important;
-        transition: all 0.3s ease;
+        transition: all 0.1s;
+        border: 0px 1px solid #ffefef;
+        color: #383838;
     }
 
     .tab_header .tab_btn:hover,
     .tab_header .tab_btn.active {
-        color: #00b7ff;
-    }
-
-    .tab_header .underline {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        height: 2px;
-        width: 0;
-        /*Cambio el ancho en .js */
-        transition: all 0.3s ease;
+        color: #00a2ff;
         background-color: #00b7ff;
+        border-radius: 0px;
+        border-bottom: 2px groove #00b7ff;
     }
 
     .tab_body {
-        display: flex;
+        padding: 20px;
     } 
 
     .tab_body .tab_content {
@@ -455,8 +454,125 @@ body {
         font-size: 12px;
         transition: all 0.3s ease;
         text-align: left;
+        display: none;
+        animation: moving .5s ease;
     }
 
+    @keyframes moving {
+        0% {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .tab_body .tab_content.active {
+        display: block;
+    }
+
+
+    .card_places{
+        position: relative;
+        width: 300px;
+        height: 350px;
+        display: inline-flex;
+        margin: 10px;
+    }
+
+   .card_places .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .card_places .front {
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0 5px 10px #000;
+    }
+
+    .card_places .front img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card_places .front h3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        background: rgba(0,0,0,.4);
+        text-align: center;
+    }
+
+    .card_places .back {
+        transform: perspective(600px) rotateY(180deg);
+        background: rgb(3,35,54);
+        padding: 15px;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        box-shadow: 0 5px 10px #000;
+    }
+
+    .card_places .back .link {
+        border-top: 1px solid #c4c4c49d;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .card_places .back .link a {
+        color: #f3f3f3;
+        list-style: none;
+        text-decoration: none;
+        font-size: 15px;
+        transition: all .5s;
+    }
+
+    .card_places .back .link a:hover{
+        color: #00b7ff;
+        transform: scale(1.1);
+        border-bottom: 1px solid #00b7ff;
+        margin-bottom: 1px;
+    }
+
+    .card_places .back h3 {
+        font-size: 25px;
+        margin-top: 10px;
+        letter-spacing: 2px;
+        transition: all .5s;
+        text-align: center;
+    }
+
+    .card_places .back h3:hover{
+        transform: scale(1.1);
+    }
+
+    .card_places .back p {
+        letter-spacing: 1px;
+        max-width: max-content;
+        font-size: 15px;
+    }
+
+    .card_places:hover .front {
+        transform: perspective(600px) rotateY(180deg);
+    }
+
+    .card_places:hover .back {
+        transform: perspective(600px) rotateY(360deg);
+    }
         
 
 /*Footer*/
