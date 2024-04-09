@@ -1077,9 +1077,6 @@ footer {
         max-width: 100%;
         margin: auto;
         padding: 20px;
-        justify-content: center;
-        align-items: center;
-        background-color: #eee;
         
     }
 
@@ -1088,12 +1085,33 @@ footer {
        background-color: #eee;
     }
 
-
-
     .tab_header .tab_btn {
         padding: 10px 10px;
         font-size: 13px;
         font-weight: 600;
+    }
+
+    .tab_body {
+        padding: 20px;
+    } 
+
+    .tab_body .tab_content {
+        min-width: 100%;
+        padding: 0px;
+        padding-top: 0px;
+        font-size: 12px;
+        transition: all 0.3s ease;
+        text-align: left;
+        display: none;
+        animation: moving .5s ease;
+    }
+
+    .card_places{
+        position: relative;
+        width: 350px;
+        height: 350px;
+        margin-top: 20px;
+        display: grid;
     }
 
      footer {
@@ -1118,23 +1136,6 @@ footer {
 }
 
     @media screen and ( min-width:576px ) and (max-width: 767px) {
-
-        .card_container {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem; 
-        }
-    
-        .card_image {
-            width: 100%;
-            height: 100%;
-        }
-    
-        .card_data {
-            width: 230px;
-            padding-inline: 2.0rem;
-            font-size: 0.9rem;
-        }
-
 
         header {
             position: absolute;
@@ -1218,6 +1219,55 @@ footer {
             padding-top: 0rem;
          }
 
+         .card_container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem; 
+        }
+    
+        .card_image {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .card_data {
+            width: 230px;
+            padding-inline: 2.0rem;
+            font-size: 0.9rem;
+        }
+
+
+         .tab_header .tab_btn {
+            padding: 10px 10px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    
+        .tab_body {
+            padding: 20px;
+        } 
+    
+        .tab_body .tab_content {
+            min-width: 100%;
+            padding: 0px;
+            padding-top: 0px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            text-align: left;
+            display: none;
+            animation: moving .5s ease;
+        }
+    
+        .card_places{
+            position: relative;
+            min-width: 450px;
+            min-height: 450px;
+            max-width: 750px;
+            max-height: 750px;
+            width: 100%;
+            margin-top: 20px;
+            display: grid;
+        }
+
         
 
         footer {
@@ -1240,22 +1290,6 @@ footer {
 }
 
 @media screen and ( min-width:768px ) and (max-width: 991px){
-
-    .card_container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem   ;
-    }
-
-    .card_image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .card_data {
-        width: 280px;
-        padding-inline: 2.5rem;
-        font-size: 1rem;
-    }
 
     header {
         position: fixed;
@@ -1380,6 +1414,63 @@ footer {
         padding-left: 0rem;
         padding-right: 0rem;
      }
+
+     .card_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem   ;
+    }
+
+    .card_image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card_data {
+        width: 280px;
+        padding-inline: 2.5rem;
+        font-size: 1rem;
+    }
+
+
+    .container_tabs {
+        display: grid;
+        place-items: center;
+        place-content: center;
+        max-width: 100%;
+        margin: auto;
+        padding: 20px;
+        background-color: #eee;
+        
+    }
+     
+    .tab_header .tab_btn {
+        padding: 10px 10px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .tab_body {
+        padding: 20px;
+    } 
+
+    .tab_body .tab_content {
+        min-width: 100%;
+        padding: 0px;
+        padding-top: 0px;
+        font-size: 12px;
+        transition: all 0.3s ease;
+        text-align: left;
+        display: none;
+        animation: moving .5s ease;
+    }
+
+    .card_places{
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin-top: 20px;
+        display: inline-block;
+    }
     
      footer {
         bottom: unset;
@@ -1402,25 +1493,6 @@ footer {
 }
 
 @media screen and ( min-width:992px ) and (max-width: 1280px) {
-
-    .container_prov {
-        height: 100%;
-    }
-
-    .card_container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .card_image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .card_data {
-        width: 300px;
-        padding-inline: 2.5rem;
-    }
 
     header {
         position: fixed;
@@ -1553,6 +1625,63 @@ footer {
         justify-content: center;
         align-items: center;
      }
+
+     .container_prov {
+        height: 100%;
+    }
+
+    .card_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .card_image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card_data {
+        width: 300px;
+        padding-inline: 2.5rem;
+    }
+
+
+     .container_tabs {
+        display: grid;
+        place-items: center;
+        max-width: 100%;
+        margin: auto;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        
+    }
+
+    .tab_wrapper {
+      /*  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
+        background-color: #eee;
+
+    }
+
+    .tab_header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px groove #dfdfdfe5;
+    }
+
+    .card_places{
+        position: relative;
+        width: 400px;
+        height: 350px;
+        margin-top: 20px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 
      .swiper {
         height: 100%;
