@@ -308,7 +308,7 @@ body {
     padding-top: 5rem;
     padding-left: 0rem;
     padding-right: 0rem;
-    height: 100%;
+    height: 100vh;
     }
 
     .swiper {
@@ -660,10 +660,10 @@ body {
 
 /*Footer*/
 
-footer {
+.footer-nav {
     background: rgb(0,63,255);
     background: linear-gradient(90deg,rgba(0,212,255,1)  0%, rgba(0,63,255,1) 100%);
-    bottom: unset;
+    bottom: 0;
     width: 100%;
     position: absolute;
     color: #fff;
@@ -671,7 +671,6 @@ footer {
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
-    
 }
 
 .footer-nav .row { 
@@ -915,11 +914,17 @@ footer {
         
     }
 
-
-    footer {
-        bottom: unset;
-        position: absolute;
-        z-index: 1;
+     .footer-nav {
+         background: rgb(0,63,255);
+         background: linear-gradient(90deg,rgba(0,212,255,1)  0%, rgba(0,63,255,1) 100%);
+         bottom: unset;
+         width: 100%;
+         position: absolute;
+         color: #fff;
+         padding: 50px 0 30px;
+         border-top-left-radius: 125px;
+         font-size: 13px;
+         line-height: 20px;
      }
 
      .footer-nav .row { 
@@ -1094,6 +1099,19 @@ footer {
     footer {
         bottom: unset;
         position: absolute;
+     }
+     
+     .footer-nav {
+         background: rgb(0,63,255);
+         background: linear-gradient(90deg,rgba(0,212,255,1)  0%, rgba(0,63,255,1) 100%);
+         bottom: unset;
+         width: 100%;
+         position: absolute;
+         color: #fff;
+         padding: 50px 0 30px;
+         border-top-left-radius: 125px;
+         font-size: 13px;
+         line-height: 20px;
      }
 
      .footer-nav .row .col {
@@ -1270,11 +1288,18 @@ footer {
         display: inline-block;
         
     }
-
-
-     footer {
-        bottom: unset;
-        position: absolute;
+     
+     .footer-nav {
+         background: rgb(0,63,255);
+         background: linear-gradient(90deg,rgba(0,212,255,1)  0%, rgba(0,63,255,1) 100%);
+         bottom: unset;
+         width: 100%;
+         position: absolute;
+         color: #fff;
+         padding: 50px 0 30px;
+         border-top-left-radius: 125px;
+         font-size: 13px;
+         line-height: 20px;
      }
 
      .footer-nav .row .col {
