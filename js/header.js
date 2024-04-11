@@ -6,18 +6,18 @@ header.innerHTML = `
         <a href="index.html"><img src="img/logo-turismo.png" alt="logo-viajes"></a>
     </div>            
         <ul class="navbar-links"> 
-        <li><a href="#">Donde Ir</a></li>                
-        <li><a href="#">Que hacer</a></li> 
+        <li><a href="#">Inicio</a></li>                
+        <li><a href="#">Donde Ir</a></li> 
         <li><a href="#">Informacion</a></li> 
         <li><a href="contacto.html" class="nav-menu-link_active" >Contacto</a></li>   
         </ul>                     
-    <a href="#" class="action_btn">Consultanos</a>
+        <a href="#" class="action_btn">Consultanos</a>
     <div class="toggle_btn">
-    <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
     </div>
     <div class="icon-whatsapp">
-    <i class="fa-brands fa-whatsapp"></i> 
-    <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i> 
+        <i class="fa-brands fa-facebook"></i>
     <a href="#"></a>
     </div>
     </div> 
@@ -25,7 +25,7 @@ header.innerHTML = `
         <li><a href="#">Donde Ir</a></li>                
         <li><a href="#">Que hacer</a></li> 
         <li><a href="#">Informacion</a></li> 
-        <li><a href="#" class="nav-menu-link_active" >Contacto</a></li>
+        <li><a href="contacto.html" class="nav-menu-link_active" >Contacto</a></li>
         <a href="#" class="action_btn">Consultanos</a>
     </div>
 `;

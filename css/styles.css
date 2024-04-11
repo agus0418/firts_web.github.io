@@ -24,7 +24,7 @@ html {
 
 body {
     position: relative;
-    padding-bottom: 4.5rem;
+    padding-bottom: 0rem;
     background-color: #eee;
     padding-top: 5rem;
     padding-left: 0rem;
@@ -251,27 +251,27 @@ body {
     /*Main   */
 
     .parrafoppal{ 
-        margin: 10;
-        padding: 5%;
-        padding-top: 1;
-        box-sizing:initial;
-        font-family: "Roboto Condensed";
-        text-shadow: 3px 3px 0px rgb(1, 17, 50);
+        padding: 35px;
+        text-shadow: 1px 1px 0px rgb(216, 216, 216);
         font-variant: small-caps;
         font-optical-sizing: auto;
-        font-weight: 800;
+        font-weight: 600;
         font-style:normal;
         font-size: 2rem;
         text-align:center;
-        color:rgb(254, 253, 253);
-        background-image: url(../img/arg.jpg);
+        color:rgb(0, 102, 255);
+        background: url(../img/vector-landscape-forest-mountains-sunset-hd-wallpaper-preview.jpg);
         background-size:cover; 
         background-repeat:no-repeat;
         background-position: center center;
-        border:0.1em solid rgba(90, 89, 89, 0.696);
+        border-bottom:1px solid rgba(90, 89, 89, 0.696);
 
     }
 
+    .phrase_container{
+        display: flex;
+    }
+    
     /* Text Title Cardbox */
 
     .container .text-animated h3{
@@ -1048,14 +1048,6 @@ body {
         align-items: center;
     }
 
-    body {
-        position: relative;
-        padding-bottom: 2.5rem;
-        padding-top: 4rem;
-        padding-left: 0rem;
-        padding-right: 0rem;
-     }
-
      .card_container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1628,15 +1620,6 @@ body {
         font-size: 35px;
         padding: 0 3px;
     }
-    
-    
-    body {
-        position: relative;
-        padding-bottom: 4.5rem;
-        padding-top: 3rem;
-        padding-left: 0rem;
-        padding-right: 0rem;
-     }
 
      .container .text-animated h3{
         text-align: center;
