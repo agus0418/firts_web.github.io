@@ -50,10 +50,16 @@ body {
 
       /*Nav menu*/
 
-      header {
-        position: absolute;
+      .content_header {
+        display: flex;
+        background-color: #000;
+        justify-content: space-between;
+      }
+
+      .header {
         background-color: aliceblue;
         height: 80px;
+        position: absolute;
         border-bottom: 1px groove rgba(174, 223, 255, 0.658);
         padding: 0 2rem;
         top: 0;
@@ -252,10 +258,10 @@ body {
 
     .parrafoppal{ 
         padding: 35px;
-        text-shadow: 1px 1px 0px rgb(216, 216, 216);
+        text-shadow: 1px 1px 0px rgb(233, 233, 233);
         font-variant: small-caps;
         font-optical-sizing: auto;
-        font-weight: 600;
+        font-weight: bold;
         font-style:normal;
         font-size: 2rem;
         text-align:center;
@@ -1178,13 +1184,10 @@ body {
 
     .icon-whatsapp {
         display: none;
-        align-items: center;
     }
 
     body {
-        position: relative;
-        padding-left: 0rem;
-        padding-right: 0rem;
+       
         padding-top: 4.5rem;
      }
 
