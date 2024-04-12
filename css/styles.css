@@ -103,9 +103,6 @@ body {
         justify-content: space-between;    
     }
     
-    .header .navbar .navbar-links:hover {
-    }
-    
     .header .navbar .navbar-links li {
         transition: all 0.3s;
     
@@ -520,6 +517,7 @@ body {
         transition: all 0.1s;
         border: 0px 1px solid #ffefef;
         color: #383838;
+        text-transform: uppercase;
     }
 
     .tab_header .tab_btn:hover,
@@ -1244,7 +1242,6 @@ body {
         font-size: 13px;
         font-weight: 600;
     }
-
 
     .tab_body .tab_content {
         min-width: 100%;
