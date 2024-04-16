@@ -6,9 +6,9 @@ header.innerHTML = `
         <a href="index.html"><img src="img/logo-turismo.png" alt="logo-viajes"></a>
     </div>            
         <ul class="navbar-links"> 
-        <li><a href="../index.html">Inicio</a></li>                
+        <li><a href="index.html">Inicio</a></li>                
         <li><a href="#">Donde Ir</a></li> 
-        <li><a href="../sobre_nosotros.html">Sobre Nosotros</a></li> 
+        <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li> 
         <li><a href="contacto.html" class="nav-menu-link_active" >Contacto</a></li>   
         </ul>                     
         <a href="#" class="action_btn">Consultanos</a>
@@ -22,9 +22,9 @@ header.innerHTML = `
     </div>
     </div> 
     <div class="dropdown_menu">
-        <li><a href="../index.html">Inicio</a></li>                
+        <li><a href="index.html">Inicio</a></li>                
         <li><a href="#">Donde Ir</a></li> 
-        <li><a href="../sobre_nosotros.html">Sobre Nosotros</a></li> 
+        <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li> 
         <li><a href="contacto.html" class="nav-menu-link_active" >Contacto</a></li>
         <a href="#" class="action_btn">Consultanos</a>
     </div>
