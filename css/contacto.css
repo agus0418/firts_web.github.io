@@ -35,6 +35,46 @@ body {
 
     } 
 
+    .contactUS {
+        position: relative;
+        width: 100%;
+        padding: 40px 100px;
+    }
+
+    .contactUS .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .contactUS .title h2 {
+        font-weight: 500;
+        color: black;
+        font-size: 2rem;
+    }
+
+    .form {
+        grid-area: form;
+    }
+
+    .info {
+        grid-area: info;
+    }
+
+    .map {
+        grid-area: map;
+    }
+
+    .contact {
+        padding: 40px;
+        background-color: brown;
+    }
+
+    .box {
+        position: relative;
+    }
+
 
 
 
