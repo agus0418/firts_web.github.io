@@ -19,7 +19,7 @@
             <h2 hidden>Contactanos</h2>
         </div>
         <div class="box">
-            <div class="contact form"  id="myform" onsubmit="return validateForm()" >
+            <div class="contact form"  id="myform"  onsubmit="event.preventDefault(); validateForm()" >
                 <div id="error_mensaje" class="error_mensaje"></div>
                 <h3>Comunicate con nosotros</h3>
                 <form class="formBox">
@@ -28,32 +28,38 @@
                         <div class="inputBox">
                             <span>Nombre</span>
                             <input type="text" placeholder="Juan" id="validationNombre">
+                            <small class="error"></small>
                         </div>
                         <div class="inputBox">
                             <span>Apellido</span>
                             <input type="text" placeholder="Perez" id="validationApellido" >
+                            <small class="error"></small>
                         </div>
                     </div>
 
                     <div class="row50">
                             <div class="inputBox">
                                 <span>Correo Electronico</span>
-                                <input type="text" placeholder="juanperez@gmail.com" id="validationEmail"> 
+                                <input type="text" placeholder="juanperez@gmail.com" id="validationEmail">
+                                <small class="error"></small>
                             </div>
                             <div class="inputBox">
                                 <span>Teléfono</span>
-                                <input type="tel" placeholder="+54 011 121212" id="validationTel" >
+                                <input type="tel" placeholder="011 121212" id="validationTel" >
+                                <small class="error"></small>
                             </div>
                     </div>
                     <div class="row100">
                         <div class="inputBox">
                             <span>Consulta</span>
                             <textarea placeholder="Tengo una consulta sobre.." name="" id="validationConsulta"></textarea>
+                            <small class="error"></small>
                         </div>        
                     </div>   
                     <div class="row100">
                         <div class="inputBox">
                             <input type="submit" value="Enviar Consulta">
+                            <p id="success"></p>
                         </div>        
                     </div>  
                         
@@ -64,11 +70,12 @@
                 <div class="infoBox">
                     <div>
                         <span><i class="fas fa-map-marker-alt"></i></span>
-                        <p>Calle Falsa 123 , CABA</p>
+                        <p>Lützowpl. 17, 10785 Berlin, Alemania
+                        </p>
                     </div>
                     <div>
                         <span><i class="fa-solid fa-envelope"></i></span>
-                        <a href="mailto:p9mZm@example.com">p9mZm@example.com</a>
+                        <a href="mailto:experienciaargentinaviajes@gmail.com">experienciaargentinaviajes@gmail.com</a>
                     </div>   
                     <div>
                         <span><i class="fa-solid fa-phone"></i></span>

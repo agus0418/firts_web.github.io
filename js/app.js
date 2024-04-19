@@ -1,50 +1,70 @@
+   const a = document.querySelector("#validationNombre");
+   const b = document.querySelector("#validationApellido");
+   const c = document.querySelector("#validationEmail");
+   const d = document.querySelector("#validationTel");
+   const e = document.querySelector("#validationConsulta");
+    var errorNodes = document.querySelectorAll(".error");
 
+    function validateForm() {
 
- function validateForm() {
-    var error_msg = document.getElementById("error_mensaje");
-    var a = document.getElementById("validationNombre").value;
-    var b = document.getElementById("validationApellido").value;
-    var c = document.getElementById("validationEmail").value;
-    var d = document.getElementById("validationTel").value;
-    var e = document.getElementById("validationConsulta").value;
-    var text; 
+        clearMessages();
+        let errorFlag = false;
 
-    error_msg.style.padding = "10px";
+        if (a.value.length < 3) {
+            errorNodes[0].innerText = "*Por Favor ingrese un nombre valido";
+            a.classList.add("error-border");
+            errorFlag = true;
+        }
 
+        if (b.value.length < 3) {
+            errorNodes[1].innerText = "*Por Favor ingrese un Apellido valido";
+            b.classList.add("error-border");
+            errorFlag = true;
+        }
 
-    if (a.length < 3) {
-        text = "*Por Favor ingrese un nombre valido";
-        error_msg.innerHTML = text;
-        return false;
+        if (!emailIsValid(c.value)) {
+            errorNodes[2].innerText = "*Por Favor ingrese un Email valido";
+            c.classList.add("error-border");
+            errorFlag = true;
+        }
+
+        if (isNaN(d.value) || d.value.length != 10) {
+            errorNodes[3].innerText = "*Por Favor ingrese un Telefono valido";
+            d.classList.add("error-border");
+            errorFlag = true;
+        }
+
+        if (e.value.length < 25) {
+            errorNodes[4].innerText = "*Minimo 25 caracteres";
+            e.classList.add("error-border");
+            errorFlag = true;
+        }
+
+        if(!errorFlag) {
+            success.innerText = "Consulta enviada con exito!";
+        }
     }
 
-    if (b.length < 3) {
-        text = "*Por Favor ingrese un Apellido valido";
-        error_msg.innerHTML = text;
-        return false;
+    function clearMessages() {
+        for (let i = 0; i < errorNodes.length; i++) {
+            errorNodes[i].innerText = "";
+        }
+        success.innerText = "";
+
+        a.classList.remove("error-border");
+        b.classList.remove("error-border");
+        c.classList.remove("error-border");
+        d.classList.remove("error-border");
+        e.classList.remove("error-border");
+
     }
 
-    if (c.indexOf("@") == -1  || c.length < 6) {
-        text = "*Por Favor ingrese un Email valido";
-        error_msg.innerHTML = text;
-        return false;
+    function emailIsValid(c) {
+        let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return pattern.test(c);     
     }
 
-    if (isNaN(d) || d.length != 10) {
-        text = "*Por Favor ingrese un Telefono valido";
-        error_msg.innerHTML = text;
-        return false;
-    }
+ 
+ 
 
-    if (e.length == 0 & e.length < 25 ) {
-        text = "*Minimo 25 caracteres";
-        error_msg.innerHTML = text;
-        return false;
-    }
-    alert("Consulta enviada con exito!")
-    return true;
-  
-  
-} 
-    
 

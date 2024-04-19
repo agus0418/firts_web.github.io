@@ -127,6 +127,7 @@ body {
         border: 1px solid rgb(255, 255, 255);
         font-size: 1.1em;
         outline: none;
+        box-sizing: border-box;
     }
 
     .formBox input {
@@ -135,6 +136,7 @@ body {
         font-size: 1.1rem;
         outline: none;
         transition: all 0.3s;
+        box-sizing: border-box;
     }
 
     .inputBox input:hover {
@@ -317,13 +319,31 @@ body {
 
     .box .error_mensaje {
         padding: 0px;
-        color: rgb(255, 255, 255);
-        background-color: rgb(255, 0, 0);
+        color: rgb(255, 0, 0);
         margin-bottom: 20px;
-        font-weight: 500;
+        font-weight: 700;
         border: none;
         border-radius: 35px;
         font-size: 0.8rem;
+    }
+
+    .error { 
+        color: red;
+        font-size: 0.8rem;
+    }
+
+    .error-border {
+        border-bottom: 1px solid red;
+    }
+
+    #success {
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    #btn-clear {
+        color: rgb(255, 255, 255);
     }
 
 
